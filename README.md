@@ -23,17 +23,23 @@ Output Image:
 
 
 
-**Shared files** The client, server, and compute nodes will all have access to the following files:machine.txt: contains address information for server/client/nodesconfig.txt: contains policy information and load probability of each node
+**Shared files**
 
-**Thrift IDL files**imageProcessing.thrift: defines a RPC service for the client and the serverService name is ImageProcessingThere is one function inside the service: double processImages(1:string folderName)
+The client, server, and compute nodes will all have access to the following files:machine.txt: contains address information for server/client/nodesconfig.txt: contains policy information and load probability of each node
+
+**Thrift IDL files**
+
+imageProcessing.thrift: defines a RPC service for the client and the serverService name is ImageProcessingThere is one function inside the service: double processImages(1:string folderName)
 computeNode.thrift:defines a RPC service for the server and compute nodesService name is computeNodeThere is one function inside the service: double singleImageProcess(1:string fileName)
 
 
 **Client**
+
 The client sends a job to the server which is the folderName which stores data to be analyzed. When the job is done, the client will get the result of the total elapsed time for the job it sends.First the client will process the machine.txt to get the server’s address . Then it connects to the server and sends a request to the server via a RPC call using that address. 
 
 
 **Server**
+
 The server receives the job sent by the client. Inside the main function, we set the hostname of the server to be “0.0.0.0” to allow for remote connections. The handler is ImageProcessingHandler which contains the implementation of processImages(folderName).It does the following steps:Firstly, after receiving the folder name, the main thread splits the job into multiple tasks which correspond to the def split(folderName) function in the server.py. The split function will process the folder, extract all images into a list and return the image list. After this step, we can see each image as a task. We used a queue to save all unfinished/rejected tasks.
 
 
@@ -46,10 +52,12 @@ If the task is rejected under load-balance policy, it will push back rejected ta
 
 
 **Random** 
+
 - def randomSelectNode()The server will assign tasks to any compute nodes randomly chosen. Delays are injected according to the load probability assigned to each node when executing the image processing in the computeNode.py.
 
 
 **Load-Balance** 
+
 - def BalanceSelectNode()The server keeps a nodesTasks dictionary which maps the node name to its task completion status [sentTasks, rejectedTasks]. For example, it will look like this:{  “node_0”: [5,3],  “node_1”: [3,0], “node_2”: [6,2],  “node_3”: [1,1]}
 - If there are nodes receiving no tasks, the server will randomly choose one of those nodes to assign a task to it. 
 - If all nodes have at least one sentTasks, the server then chooses the compute node based on the rejection ratio of each node. In order to avoid all threads sending tasks to the node with the lowest rejection ratio, we first find the node with the largest rejection ratio and then randomly select one from the remaining nodes to spread the load appropriately.
@@ -59,6 +67,7 @@ After all threads finish completing tasks (tasksQueue.empty() == True), the serv
 
 
 **Compute Nodes**
+
 Each compute node runs a multi-threaded Thrift Server (TThreadedServer) to accept and execute multiple tasks. Compute nodes will process the config.txt to extract the corresponding load probability and policy. We use random numbers to simulate load probability for rejecting tasks and injecting loads: num = random.randint(1, 10)if (num >= 1 and num <= loadProb*10):...
 
 Then each node is maintained to handle the image process. The image process is maintained by the function singleImageProcess(fileName).
@@ -72,13 +81,17 @@ After the image processing is done, it will save processed images in the data/ou
 ## **User Document** - How to run the service
 
 Here are the detailed steps of how to run each component and how to use the service. All the commands should be run in the terminal. 
+
+
 **STEP 1: Setting the config.txt and machine.txt**
 Before running the service, you should modify the config.txt and machine.txt based on your choice. Two policies are {load-balance,random} config.txt should look like below:
 policy : load-balance  node_0: 0.1node_1: 0.5node_2: 0.2node_3: 0.9
 
 **Run in the Localhost**
 If you want to run the service on the localhost, first navigate to the proj_dir and change the machine.txt to the following:
-node_0 127.0.0.1node_1 127.0.0.1node_2 127.0.0.1node_3 127.0.0.1server 127.0.0.1client 127.0.0.1	**Running Remotely**
+node_0 127.0.0.1node_1 127.0.0.1node_2 127.0.0.1node_3 127.0.0.1server 127.0.0.1client 127.0.0.1	
+
+**Running Remotely**
 If you want to run the service on the localhost, first navigate to the project folder and change the machine.txt to the following:
 node_0 kh4250-08.cselabs.umn.edu node_1 kh4250-03.cselabs.umn.edunode_2 kh4250-06.cselabs.umn.edu node_3 kh4250-02.cselabs.umn.eduserver kh4250-05.cselabs.umn.educlient kh4250-01.cselabs.umn.edu
 
