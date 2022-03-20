@@ -1,0 +1,6 @@
+node_command python3 computeNode.py 0
+node_command python3 computeNode.py 1
+node_command python3 computeNode.py 2
+node_command python3 computeNode.py 3
+server_command python3 server.py
+client_command python3 client.py

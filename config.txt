@@ -1,0 +1,5 @@
+policy : load-balance
+node_0: 0.1
+node_1: 0.5
+node_2: 0.2
+node_3: 0.9

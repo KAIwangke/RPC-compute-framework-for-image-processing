@@ -1,0 +1,302 @@
+Starting server  ...1646367740.3702235
+nodes: {'node_0': '127.0.0.1', 'node_1': '127.0.0.1', 'node_2': '127.0.0.1', 'node_3': '127.0.0.1'}
+nodeTaskss: {'node_0': [1, 0], 'node_1': [1, 0], 'node_2': [1, 0], 'node_3': [1, 0]}
+There are 100 total tasks 
+policy is load-balance
+Starting Thread-1
+Starting Thread-2
+Starting Thread-4
+Starting Thread-3
+Start connecting to compute node node_2
+Start connecting to compute node node_1
+Start connecting to compute node node_0
+Start connecting to compute node node_3
+Task data/input_dir/img_073.jpg is rejected by the current node node_3
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/squirrel_cls.jpgis 0.024064064025878906 bynode_0
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_074.jpgis 0.0247344970703125 bynode_2
+Task data/input_dir/img_008.jpg is rejected by the current node node_1
+Start connecting to compute node node_1
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_001.jpgis 0.03902792930603027 bynode_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_090.jpgis 0.01546335220336914 bynode_1
+Start connecting to compute node node_2
+Task data/input_dir/img_034.jpg is rejected by the current node node_2
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_046.jpgis 0.022500276565551758 bynode_0
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_048.jpgis 0.026046276092529297 bynode_1
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_022.jpgis 0.020093679428100586 bynode_2
+Start connecting to compute node node_1
+Task data/input_dir/img_025.jpg is rejected by the current node node_1
+Start connecting to compute node node_2
+Task data/input_dir/img_059.jpg is rejected by the current node node_2
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_088.jpgis 0.03551530838012695 bynode_2
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_057.jpgis 0.0157012939453125 bynode_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_006.jpgis 3.0414938926696777 bynode_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_050.jpgis 0.01822519302368164 bynode_0
+Elapsed time of current task data/input_dir/img_041.jpgis 3.024613618850708 bynode_2
+Start connecting to compute node node_1
+Start connecting to compute node node_0
+Task data/input_dir/img_081.jpg is rejected by the current node node_1
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_033.jpgis 3.0164055824279785 bynode_2
+Start connecting to compute node node_1
+Task data/input_dir/img_062.jpg is rejected by the current node node_1
+Start connecting to compute node node_1
+Task data/input_dir/img_010.jpg is rejected by the current node node_1
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_017.jpgis 0.014375448226928711 bynode_2
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_032.jpgis 0.017699241638183594 bynode_2
+Start connecting to compute node node_1
+Task data/input_dir/img_035.jpg is rejected by the current node node_1
+Start connecting to compute node node_3
+Task data/input_dir/img_049.jpg is rejected by the current node node_3
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_047.jpgis 0.03168320655822754 bynode_0
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_091.jpgis 0.02119159698486328 bynode_0
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_086.jpgis 3.024794578552246 bynode_0
+Start connecting to compute node node_1
+Task data/input_dir/img_075.jpg is rejected by the current node node_1
+Start connecting to compute node node_0
+Task data/input_dir/img_009.jpg is rejected by the current node node_0
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_072.jpgis 0.019502639770507812 bynode_0
+Start connecting to compute node node_1
+Task data/input_dir/mask.png is rejected by the current node node_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_040.jpgis 0.07105898857116699 bynode_1
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_007.jpgis 0.02688312530517578 bynode_0
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_016.jpgis 0.014235973358154297 bynode_2
+Elapsed time of current task data/input_dir/HappyFish.jpgis 0.010672330856323242 bynode_0
+Start connecting to compute node node_0
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_011.jpgis 0.01483154296875 bynode_0
+Start connecting to compute node node_2
+Task data/input_dir/img_064.jpg is rejected by the current node node_2
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_018.jpgis 0.03784060478210449 bynode_2
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_051.jpgis 0.012775421142578125 bynode_2
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_080.jpgis 0.03437685966491699 bynode_2
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_019.jpgis 3.029999256134033 bynode_2
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_087.jpgis 0.015983104705810547 bynode_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_065.jpgis 3.0849108695983887 bynode_0
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_063.jpgis 3.033625602722168 bynode_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_056.jpgis 3.025324821472168 bynode_1
+Start connecting to compute node node_2
+Task data/input_dir/img_023.jpg is rejected by the current node node_2
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_012.jpgis 0.022099018096923828 bynode_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_069.jpgis 0.015426158905029297 bynode_0
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_015.jpgis 0.015371322631835938 bynode_1
+Start connecting to compute node node_1
+Task data/input_dir/img_067.jpg is rejected by the current node node_1
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_060.jpgis 0.05327963829040527 bynode_2
+Start connecting to compute node node_1
+Task data/input_dir/img_029.jpg is rejected by the current node node_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_055.jpgis 0.06782054901123047 bynode_0
+Start connecting to compute node node_1
+Task data/input_dir/img_084.jpg is rejected by the current node node_1
+Start connecting to compute node node_1
+Task data/input_dir/img_052.jpg is rejected by the current node node_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_083.jpgis 0.030190467834472656 bynode_0
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_020.jpgis 0.014688491821289062 bynode_1
+Start connecting to compute node node_0
+Task data/input_dir/img_027.jpg is rejected by the current node node_0
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_024.jpgis 3.0307135581970215 bynode_0
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_058.jpgis 3.020566940307617 bynode_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_031.jpgis 0.0347132682800293 bynode_2
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_092.jpgis 0.016992807388305664 bynode_0
+Start connecting to compute node node_0
+Task data/input_dir/img_038.jpg is rejected by the current node node_0
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_095.jpgis 0.01911449432373047 bynode_0
+Start connecting to compute node node_0
+Task data/input_dir/img_044.jpg is rejected by the current node node_0
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_071.jpgis 0.0181429386138916 bynode_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_076.jpgis 0.1012582778930664 bynode_0
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_089.jpgis 3.029508352279663 bynode_0
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_004.jpgis 0.014053106307983398 bynode_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_003.jpgis 0.0151214599609375 bynode_0
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_026.jpgis 0.026247024536132812 bynode_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/fruits.jpgis 0.015712261199951172 bynode_0
+Start connecting to compute node node_1
+Task data/input_dir/img_021.jpg is rejected by the current node node_1
+Start connecting to compute node node_1
+Task data/input_dir/img_053.jpg is rejected by the current node node_1
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_082.jpgis 0.02479410171508789 bynode_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_028.jpgis 0.014290809631347656 bynode_0
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_036.jpgis 3.0376968383789062 bynode_1
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_085.jpgis 0.032591819763183594 bynode_1
+Start connecting to compute node node_1
+Task data/input_dir/img_061.jpg is rejected by the current node node_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_066.jpgis 0.03443121910095215 bynode_0
+Start connecting to compute node node_1
+Task data/input_dir/img_068.jpg is rejected by the current node node_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_043.jpgis 3.032712936401367 bynode_2
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_013.jpgis 0.032602787017822266 bynode_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_002.jpgis 0.02681565284729004 bynode_0
+Start connecting to compute node node_1
+Task data/input_dir/img_079.jpg is rejected by the current node node_1
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_005.jpgis 0.01869344711303711 bynode_2
+Start connecting to compute node node_2
+Task data/input_dir/img_077.jpg is rejected by the current node node_2
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_070.jpgis 0.024507522583007812 bynode_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_078.jpgis 3.0242557525634766 bynode_2
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_094.jpgis 0.02153158187866211 bynode_2
+Elapsed time of current task data/input_dir/img_039.jpgis 0.04258441925048828 bynode_0
+Start connecting to compute node node_2
+Start connecting to compute node node_0
+Task data/input_dir/img_045.jpg is rejected by the current node node_2
+Task data/input_dir/img_093.jpg is rejected by the current node node_0
+Start connecting to compute node node_2
+Start connecting to compute node node_2
+Task data/input_dir/baboon.jpg is rejected by the current node node_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_042.jpgis 0.015051603317260742 bynode_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_030.jpgis 0.033309221267700195 bynode_0
+Start connecting to compute node node_1
+Task data/input_dir/img_073.jpg is rejected by the current node node_1
+Elapsed time of current task data/input_dir/img_037.jpgis 0.024563074111938477 bynode_0
+Start connecting to compute node node_0
+Start connecting to compute node node_1
+Task data/input_dir/img_034.jpg is rejected by the current node node_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_008.jpgis 0.015288352966308594 bynode_0
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_025.jpgis 0.030671119689941406 bynode_0
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_081.jpgis 0.018935203552246094 bynode_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_059.jpgis 0.05473470687866211 bynode_0
+Start connecting to compute node node_2
+Task data/input_dir/img_010.jpg is rejected by the current node node_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_054.jpgis 3.0238375663757324 bynode_1
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_062.jpgis 0.02602386474609375 bynode_0
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_035.jpgis 0.023828506469726562 bynode_0
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_075.jpgis 0.036913394927978516 bynode_1
+Elapsed time of current task data/input_dir/img_049.jpgis 0.04710507392883301 bynode_1
+Start connecting to compute node node_0
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/mask.pngis 0.0061168670654296875 bynode_0
+Start connecting to compute node node_0
+Task data/input_dir/img_023.jpg is rejected by the current node node_0
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_067.jpgis 0.01964282989501953 bynode_0
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_009.jpgis 0.10358381271362305 bynode_0
+Start connecting to compute node node_1
+Task data/input_dir/img_084.jpg is rejected by the current node node_1
+Elapsed time of current task data/input_dir/img_029.jpgis 0.014294862747192383 bynode_0
+Start connecting to compute node node_1
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_064.jpgis 0.0748741626739502 bynode_2
+Task data/input_dir/img_052.jpg is rejected by the current node node_1
+Start connecting to compute node node_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_027.jpgis 0.025339126586914062 bynode_2
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_044.jpgis 0.0257568359375 bynode_0
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_021.jpgis 0.013785362243652344 bynode_2
+Start connecting to compute node node_1
+Elapsed time of current task data/input_dir/img_061.jpgis 0.012874603271484375 bynode_1
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_068.jpgis 0.05055117607116699 bynode_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_079.jpgis 0.036585330963134766 bynode_0
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_077.jpgis 0.01958751678466797 bynode_0
+Elapsed time of current task data/input_dir/img_014.jpgis 3.014849901199341 bynode_0
+Start connecting to compute node node_0
+Start connecting to compute node node_2
+Task data/input_dir/img_093.jpg is rejected by the current node node_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_045.jpgis 0.017626285552978516 bynode_0
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_073.jpgis 0.012535572052001953 bynode_2
+Start connecting to compute node node_1
+Task data/input_dir/img_034.jpg is rejected by the current node node_1
+Start connecting to compute node node_2
+Task data/input_dir/img_010.jpg is rejected by the current node node_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_023.jpgis 0.016712665557861328 bynode_0
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_084.jpgis 0.013893604278564453 bynode_0
+Start connecting to compute node node_0
+Task data/input_dir/img_052.jpg is rejected by the current node node_0
+Start connecting to compute node node_1
+Task data/input_dir/img_093.jpg is rejected by the current node node_1
+Start connecting to compute node node_2
+Elapsed time of current task data/input_dir/img_034.jpgis 0.026058673858642578 bynode_2
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_010.jpgis 0.02021050453186035 bynode_0
+Start connecting to compute node node_1
+Task data/input_dir/img_052.jpg is rejected by the current node node_1
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_093.jpgis 0.029989242553710938 bynode_0
+Start connecting to compute node node_0
+Elapsed time of current task data/input_dir/img_038.jpgis 3.0366785526275635 bynode_2
+Exiting Thread-3
+Elapsed time of current task data/input_dir/img_053.jpgis 3.0337884426116943 bynode_2
+Exiting Thread-4
+Elapsed time of current task data/input_dir/baboon.jpgis 3.032895088195801 bynode_0
+Exiting Thread-2
+Elapsed time of current task data/input_dir/img_052.jpgis 3.0329577922821045 bynode_0
+Exiting Thread-1
+nodeTasks are {'node_0': [54, 7], 'node_1': [43, 24], 'node_2': [44, 10], 'node_3': [2, 2]}
+All tasks are finished and all threads are finishing. Exit Main thread.
+
