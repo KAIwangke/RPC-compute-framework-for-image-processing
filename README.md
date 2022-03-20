@@ -16,6 +16,7 @@ Input Image:
 
 Output Image:
 
+![baboon](https://user-images.githubusercontent.com/46043861/159189551-79ce07d4-2a0e-4d34-a2c3-ba2486c1192c.jpg)
 
 
 
@@ -25,10 +26,22 @@ Output Image:
 **Shared files** The client, server, and compute nodes will all have access to the following files:machine.txt: contains address information for server/client/nodesconfig.txt: contains policy information and load probability of each node
 **Thrift IDL files**imageProcessing.thrift: defines a RPC service for the client and the serverService name is ImageProcessingThere is one function inside the service: double processImages(1:string folderName)
 computeNode.thrift:defines a RPC service for the server and compute nodesService name is computeNodeThere is one function inside the service: double singleImageProcess(1:string fileName)
+
+
 **Client**The client sends a job to the server which is the folderName which stores data to be analyzed. When the job is done, the client will get the result of the total elapsed time for the job it sends.First the client will process the machine.txt to get the server’s address . Then it connects to the server and sends a request to the server via a RPC call using that address. 
+
+
 **Server**The server receives the job sent by the client. Inside the main function, we set the hostname of the server to be “0.0.0.0” to allow for remote connections. The handler is ImageProcessingHandler which contains the implementation of processImages(folderName).It does the following steps:Firstly, after receiving the folder name, the main thread splits the job into multiple tasks which correspond to the def split(folderName) function in the server.py. The split function will process the folder, extract all images into a list and return the image list. After this step, we can see each image as a task. We used a queue to save all unfinished/rejected tasks.
+
+
 Secondly, the server assigns each task to a compute node. It creates 4 threads in total so that each thread will pick up a task from the tasksQueue. By doing this, each task can run in parallel which saves completion time. 
-Before running the thread, the server will process the config.txt to get the current scheduling policy and process machine.txt to get all nodes’ addresses. Then the server will choose the compute node based on the policy. After deciding on the compute node, the thread will pop out a task from the tasksQueue,which then connects to the chosen compute node via RPC call by passing the task(image filename). If the task is rejected under load-balance policy, it will push back rejected tasks into tasksQueue. Here is the detailed implementation of each scheduling policy and its corresponding method in the server.py:
+
+
+Before running the thread, the server will process the config.txt to get the current scheduling policy and process machine.txt to get all nodes’ addresses. Then the server will choose the compute node based on the policy. After deciding on the compute node, the thread will pop out a task from the tasksQueue,which then connects to the chosen compute node via RPC call by passing the task(image filename). 
+
+If the task is rejected under load-balance policy, it will push back rejected tasks into tasksQueue. Here is the detailed implementation of each scheduling policy and its corresponding method in the server.py:
+
+
 **Random** **-** def randomSelectNode()The server will assign tasks to any compute nodes randomly chosen. Delays are injected according to the load probability assigned to each node when executing the image processing in the computeNode.py.
 **Load-Balance** - def BalanceSelectNode()The server keeps a nodesTasks dictionary which maps the node name to its task completion status [sentTasks, rejectedTasks]. For example, it will look like this:{  “node_0”: [5,3],  “node_1”: [3,0],             
   “node_2”: [6,2],  “node_3”: [1,1]}If there are nodes receiving no tasks, the server will randomly choose one of those nodes to assign a task to it. If all nodes have at least one sentTasks, the server then chooses the compute node based on the rejection ratio of each node. In order to avoid all threads sending tasks to the node with the lowest rejection ratio, we first find the node with the largest rejection ratio and then randomly select one from the remaining nodes to spread the load appropriately.
