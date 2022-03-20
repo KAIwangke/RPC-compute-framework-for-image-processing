@@ -2,11 +2,11 @@
 
 Ying Lu (lu000097@umn.edu), Ke Wang (wan00802@umn.edu)
 
-## framewor：Apache Thrift
+## framewor：Apache Thrift 
 
 ## **Design Document** 
 
-In general, for this programming assignment, we implemented a simple RPC compute framework for implementing image-processing. The framework receives jobs from a client, splits a job into multiple tasks, and assigns tasks to compute nodes which perform the computations. The client will send a job for image processing. The framework uses two different scheduling policies which are Random and Load-balancing to assign tasks to compute nodes.
+In general, for this programming assignment, we implemented a simple RPC(Remote procedure call) compute framework for implementing image-processing. The framework receives jobs from a client, splits a job into multiple tasks, and assigns tasks to compute nodes which perform the computations. The client will send a job for image processing. The framework uses two different scheduling policies which are Random and Load-balancing to assign tasks to compute nodes.
 
 Input Image:
 
@@ -24,6 +24,7 @@ Output Image:
 
 
 **Shared files** The client, server, and compute nodes will all have access to the following files:machine.txt: contains address information for server/client/nodesconfig.txt: contains policy information and load probability of each node
+
 **Thrift IDL files**imageProcessing.thrift: defines a RPC service for the client and the serverService name is ImageProcessingThere is one function inside the service: double processImages(1:string folderName)
 computeNode.thrift:defines a RPC service for the server and compute nodesService name is computeNodeThere is one function inside the service: double singleImageProcess(1:string fileName)
 
@@ -43,9 +44,15 @@ If the task is rejected under load-balance policy, it will push back rejected ta
 
 
 **Random** **-** def randomSelectNode()The server will assign tasks to any compute nodes randomly chosen. Delays are injected according to the load probability assigned to each node when executing the image processing in the computeNode.py.
+
+
 **Load-Balance** - def BalanceSelectNode()The server keeps a nodesTasks dictionary which maps the node name to its task completion status [sentTasks, rejectedTasks]. For example, it will look like this:{  “node_0”: [5,3],  “node_1”: [3,0],             
   “node_2”: [6,2],  “node_3”: [1,1]}If there are nodes receiving no tasks, the server will randomly choose one of those nodes to assign a task to it. If all nodes have at least one sentTasks, the server then chooses the compute node based on the rejection ratio of each node. In order to avoid all threads sending tasks to the node with the lowest rejection ratio, we first find the node with the largest rejection ratio and then randomly select one from the remaining nodes to spread the load appropriately.
+  
+  
 After all threads finish completing tasks (tasksQueue.empty() == True), the server will print the elapsed time of running all tasks and returns the elapsed time back to the client.
+
+
 **Compute Nodes**Each compute node runs a multi-threaded Thrift Server (TThreadedServer) to accept and execute multiple tasks. Compute nodes will process the config.txt to extract the corresponding load probability and policy. We use random numbers to simulate load probability for rejecting tasks and injecting loads: num = random.randint(1, 10)if (num >= 1 and num <= loadProb*10):...
 Then each node is maintained to handle the image process. The image process is maintained by the function singleImageProcess(fileName).
 Inside the main function, we set the hostname of the node to be “0.0.0.0” to allow for remote connections. Inside the Class ComputeNodeHandler() we have the defined function def singleImageProcess()and the following helper functions:
