@@ -2,7 +2,7 @@
 
 Ying Lu (lu000097@umn.edu), Ke Wang (wan00802@umn.edu)
 
-## framewor：Apache Thrift 
+## Framework Referenced：Apache Thrift 
 
 ## **Design Document** 
 
